@@ -30,10 +30,10 @@
             karena bisa bikin mata sakit, <br>
             dan bisa bikin kita jadi malas bergerak, <br>
         </p>
-        <button id="sembunyi" onclick="rest()"> Oke </button>
+        <button id="sembunyi" onclick="document.getElementById('ingat').style.display='none'"> Oke </button>
     </div>
     <header>
-        <a href="index.html"><img src="asset/logo website.svg" class="himg"></a>
+        <a href="index.html"><img src="asset/logo_website.svg" class="himg"></a>
         <div class="slider">
             <a class="isi" href="info_menarik.html">info menarik </a>
             <a class="isi" href="Anak_Sehat.html">Anak Sehat </a>
@@ -42,6 +42,7 @@
         </div>
     </header>
     <main>
+
         <H1> Selamat datang di Kids Web </H1>
         <br>
         <aside class="kanan">
@@ -67,7 +68,7 @@
             </div>
 
         </aside>
-        <h2>Dongeng anak</h2>
+        <h2>Dongeng dan cerita anak</h2>
         <div class="gambarweb2">
             <div class="gambarweb">
                 <img src="#" class="gambarwebg">
@@ -85,46 +86,83 @@
             <div class="gambarweb6">
                 <p>_</p>
             </div>
-            <div class="gambarweb3">
-                <li>
+            <div class="sliderArtikel">
+                <div class="gambarweb3">
+                    <li>
+                        <img src="anak/dongeng/asset/" class="gambarwebg">
+                        <h3>*belum diisi* </h3>
+                        <a href="anak/dongeng/Cerita2.html">baca</a>
+                    </li>
+                </div>
+                <div class="gambarweb6">
+                    <p>_</p>
+                </div>
+                <div class="gambarweb">
                     <img src="anak/dongeng/asset/" class="gambarwebg">
                     <h3>*belum diisi* </h3>
-                    <a href="anak/dongeng/Cerita2.html">baca</a>
-                </li>
+                    <a href="anak/dongeng/Cerita3.html">baca</a>
+                </div>
+                <div class="gambarweb6">
+                    <p>_</p>
+                </div>
+                <div class="gambarweb">
+                    <img src="anak/dongeng/asset/" class="gambarwebg">
+                    <h3>*belum diisi* </h3>
+                    <a href="anak/dongeng/Cerita4.html">baca</a>
+                </div>
+                <div class="gambarweb6">
+                    <p>_</p>
+                </div>
+                <div class="gambarweb3">
+                    <li>
+                        <img src="anak/dongeng/asset/" class="gambarwebg">
+                        <h3>*belum diisi* </h3>
+                        <a href="anak/dongeng/Cerita5.html">baca</a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <section id="videoGame" class="gambarweb2">
+            <h2>Game dan video</h2>
+            <div class="gambarweb">
+                <a href="https://scratch.mit.edu/projects/1163343154/fullscreen" target="_blank">
+
+                    <iframe src="https://scratch.mit.edu/projects/1163343154/fullscreen" onclick="toggleFullscreen()"
+                        allowfullscreen></iframe>
+
+                    <h3>Animasi : Jangan Membuli !</h3>
+                </a>
+                <p>Di sebuah lomba ada anak yang dibuli bernama oyen, <br> tapi kenapa di dibuli? bagaimana
+                    ceritanya?</p>
             </div>
             <div class="gambarweb6">
                 <p>_</p>
             </div>
             <div class="gambarweb">
-                <img src="anak/dongeng/asset/" class="gambarwebg">
-                <h3>*belum diisi* </h3>
-                <a href="anak/dongeng/Cerita3.html">baca</a>
-            </div>
-            <div class="gambarweb6">
-                <p>_</p>
-            </div>
-            <div class="gambarweb">
-                <img src="anak/dongeng/asset/" class="gambarwebg">
-                <h3>*belum diisi* </h3>
-                <a href="anak/dongeng/Cerita4.html">baca</a>
-            </div>
-            <div class="gambarweb6">
-                <p>_</p>
-            </div>
-            <div class="gambarweb3">
-                <li>
-                    <img src="anak/dongeng/asset/" class="gambarwebg">
-                    <h3>*belum diisi* </h3>
-                    <a href="anak/dongeng/Cerita5.html">baca</a>
-                </li>
-            </div>
 
-
-            <script src="sistem.js"></script>
+                <iframe src="https://wordwall.net/id/resource/100623474/permainan-untuk-anak-paud"
+                    onmouseover="fullscreen(this.src)" href="#fullscreen" class="iframe" allowfullscreen></iframe>
+                <a href="https://wordwall.net/id/resource/100623474/permainan-untuk-anak-paud" target="_blank">
+                    <h3>Game Edukasi : AdaptedMind</h3>
+                </a>
+                <p>Di sebuah lomba ada anak yang dibuli bernama oyen, <br> tapi kenapa di dibuli? bagaimana
+                    ceritanya?</p>
+            </div>
+            <div id="fullscreen">
+                <iframe id="FullIframe"></iframe>
+                <button onclick="document.getElementById('fullscreen').style.display='none'"><img src="asset/close.png"
+                        alt="tutup"></button>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <script src="sistem.js"></script>
     </main>
     <footer>
         <div class="more">
-            <p>2025 kidsWeb</p>
             <h3>Contact Me</h3>
             <p> Gmail : codingwithtasha@gmail.com</p>
             <p> Gmail : tashanitazara190@gmail.com</p>

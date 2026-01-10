@@ -23,7 +23,7 @@
     </div>
     <header>
         <div class="headerKeren">
-            <img src="asset/logo website.svg" class="himg">
+            <img src="asset/logo_website.svg" class="himg">
             <div class="slider">
 
                 <a id="isi1" class="isi" href="info_menarik.html">info menarik </a>
@@ -35,7 +35,24 @@
         <hr class="hr">
     </header>
 
+    <div id="KidsORteens">
+        <h2>Kamu usia yang mana?</h2>
+        <div class="pilihan">
+            <a class="pilihKids" onclick="document.getElementById('KidsORteens').style.display='none'">
+                Anak Kecil <br> (0-9 tahun) <br>
+                <img src="asset/anak.png" id="tombolAnak">
+            </a>
+            <a class="pilihTeens" onclick="document.getElementById('KidsORteens').style.display='none'">
+                Remaja <br> (10-18 tahun) <br>
+                <img src="asset/teens.png" id="tombolTeens">
 
+            </a>
+            <a class="pilihAdult">
+                dewasa <br> (19+)
+                <img src="asset/dewasa.png">
+            </a>
+        </div>
+    </div>
 
     <!-- <div id="ingat" class="ingat">
         <h2>Peringatan!!</h2>
@@ -50,10 +67,11 @@
         <button id="sembunyi" onclick="rest()"> Oke </button>
     </div> -->
 
-    <!-- <main>
-        <div class="timer">
+    <main>
+        <p> batas waktu <span id="jam">0</span> jam <span id="menit">0</span> menit <span id="detik">0</span> detik </p>
+        <!-- <div class="timer">
             <div class="time">
-                <span id="jam">01</span>
+                <span id="jam">9</span>
                 <p>Jam</p>
             </div>
             <div class="time">
@@ -66,73 +84,106 @@
             </div>
             <p>sampai waktu istirahat</p>
         </div> -->
-    <H1> Selamat datang di Kids Web </H1>
-    <br>
-    <aside class="kanan">
-        <div class="saran">
-            <h3>Saran</h3>
-            <a href="resep/Pigosu.html">Resep pigosu, pisang goreng susu</a><br>
-            <br>
-            <a href="Website_ku_yang_lama.html">Berita hari ini</a><br>
-            <br>
-            <a href="#">Berita hari ini</a><br>
-            <br>
-            <a href="#">Berita hari ini</a><br>
-            <br>
-            <a href="#">Berita hari ini</a><br>
-            <br>
-            <a href="#">Berita hari ini</a><br>
-            <br>
-            <a href="#">Berita hari ini</a><br>
-            <br>
-            <a href="#">Berita hari ini</a><br>
-            <br>
-            <a href="#">Berita hari ini</a>
-        </div>
+        <H1> Selamat datang di Kids Web </H1>
+        <br>
+        <aside class="kanan">
+            <div class="saran">
+                <h3>Saran</h3>
+                <a href="resep/Pigosu.html">Resep pigosu, pisang goreng susu</a><br>
+                <br>
+                <a href="Website_ku_yang_lama.html">Berita hari ini</a><br>
+                <br>
+                <a href="#">Berita hari ini</a><br>
+                <br>
+                <a href="#">Berita hari ini</a><br>
+                <br>
+                <a href="#">Berita hari ini</a><br>
+                <br>
+                <a href="#">Berita hari ini</a><br>
+                <br>
+                <a href="#">Berita hari ini</a><br>
+                <br>
+                <a href="#">Berita hari ini</a><br>
+                <br>
+                <a href="#">Berita hari ini</a>
+            </div>
 
-    </aside>
+        </aside>
 
 
-    <Div class="Tentang">
-        <H2>Apa itu Kidsweb?</H2>
-        <p>
-            Kidsweb adalah website berisi berita, informasi, resep dan lan lain,<br>
-            dengan tujuan mengedukasi semua orang, jadi siapa saja bisa bantu mengisi artikel<br>
-            caranya kirim tulisan kalian, lebih baik kalau sudah ada desainnya, jadi judul dan textnya jelas <br>
-            nanti tinggal kirim filenya(misalnya word atau canva) ke <a href="mailto:tashanitazara@gmail.com"
-                target="_blank">Gmail Oficial kami</a> <br>
-            Semoga Bermanfaat
-        </p>
-    </Div>
+        <Div class="Tentang">
+            <H2>Apa itu Kidsweb?</H2>
+            <p>
+                Kidsweb adalah website berisi berita, informasi, resep dan lan lain,<br>
+                dengan tujuan mengedukasi semua orang, jadi siapa saja bisa bantu mengisi artikel<br>
+                caranya kirim tulisan kalian, lebih baik kalau sudah ada desainnya, jadi judul dan content nya jelas
+                <br>
+                nanti tinggal kirim filenya(misalnya word atau canva) ke <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=tashanitazara@gmail.com ?subject=isi artikel nama saya : filenya artikelnya :"
+                    target="_blank">Gmail
+                    Oficial kami</a> jangan lupa <a href="#Tentang" id="syarat"> Lihat syarat dan ketentuan
+                    kami</a>
+                Semoga Bermanfaat
+            </p>
+            <div id="kirim">
+                <div class="DivKanan">
+                    <h2>Kirim Artikelmu!</h2>
+                    <p>
+                        Disini kalian bisa mengisi artikel gratis, tapi jika terlalu banyak promosi ke satu
+                        barang/perusahaan kami akan menjadikan nya iklan berbayar. <br>
+                        Dan kami akan memilahnya dulu sebelum dimuat agar aman untuk semua orang. <br>
+                        setelah selesai nanti linknya dikirim lewat email kamu
+                    </p>
 
-    <Div class="resep">
-        <h2>Di bagian anak sehat ada...</h2>
-        <p>
-            Cara menjadi anak sehat, informasi tentang kesehatan <br>
-            dan gizi anak, ada juga beberapa resep sehat.
-        </p>
-        <a href="resep.html">Lihat</a>
+                </div>
 
-    </Div>
+                <hr color="mimimi">
 
-    <Div class="fakta_unik">
-        <h2>yang ada di info menarik</h2>
-        <p> Fakta unik berisi berbagai fakta menarik dan pengetahuan lain</p>
-        <a href="faktaunik.html">Lihat</a>
-    </Div>
+                <div class="DivKiri">
+                    <h2>atau mau pasang iklan?</h2>
+                    <p>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tashanitazara@gmail.com" target="_blank">
+                            Kirim email ke kami
+                        </a>
+                        dengan gambar/video iklanmu(biaya akan diberitahu saat chat) dan jelaskan mau iklan seperti
+                        apa(mau iklan artikel, ikla visual, DLL),<br> ingat ! jika iklanmu tidak sesuai
+                        (misal mengandung
+                        pornografi, kekerasan, dll. atau promosi sesuatu yang buruk, seperti rokok)
+                        maka kami akan menolaknya. <br>
+                    </p>
+                </div>
 
-    <Div class="for_kids">
-        <h2>Untuk Anak</h2>
-        <p> Untuk Anak berisi berbagai fakta menarik, tutorial, cerita anak, Dll</p>
-    </Div>
+            </div>
+        </Div>
 
-    <Div class="for_parents">
-        <h2>Untuk Orang Tua</h2>
-        <p> Untuk Orang Tua berisi berbagai informasi, tips, berita untuk orang tua, Dll</p>
-        <a href="#">Lihat</a>
-    </Div>
+        <Div class="resep">
+            <h2>Di bagian anak sehat ada...</h2>
+            <p>
+                Cara menjadi anak sehat, informasi tentang kesehatan <br>
+                dan gizi anak, ada juga beberapa resep sehat.
+            </p>
+            <a href="resep.html">Lihat</a>
 
-    <script src="sistem.js"></script>
+        </Div>
+
+        <Div class="fakta_unik">
+            <h2>yang ada di info menarik</h2>
+            <p> Fakta unik berisi berbagai fakta menarik dan pengetahuan lain</p>
+            <a href="faktaunik.html">Lihat</a>
+        </Div>
+
+        <Div class="for_kids">
+            <h2>Untuk Anak</h2>
+            <p> Untuk Anak berisi berbagai fakta menarik, tutorial, cerita anak, Dll</p>
+        </Div>
+
+        <Div class="for_parents">
+            <h2>Untuk Orang Tua</h2>
+            <p> Untuk Orang Tua berisi berbagai informasi, tips, berita untuk orang tua, Dll</p>
+            <a href="#">Lihat</a>
+        </Div>
+
+        <script src="sistem.js"></script>
     </main>
     <footer>
         <div class="more">

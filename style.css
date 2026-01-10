@@ -4,7 +4,10 @@
 }
 
 body {
-    background-color: rgb(204, 204, 255);
+    background-image: url('asset/background.svg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .background {
@@ -26,6 +29,8 @@ header {
     top: 0;
     position: sticky;
     width: 99%;
+    z-index: 3;
+
 }
 
 .himg {
@@ -52,7 +57,8 @@ header a:hover {
 .slider {
     float: right;
     width: 80%;
-    height: 100%;
+    height: 10%;
+    text-align: center;
     display: flex;
     aspect-ratio: 16/9;
     overflow-x: auto;
@@ -66,48 +72,7 @@ main {
     /* background-size: contain;
     background-attachment: fixed; */
     padding: 20px;
-    background-color: rgb(204, 204, 255);
-}
 
-
-
-footer {
-    background-color: rgb(207, 159, 255);
-    height: 420px;
-    max-height: 25%;
-}
-
-
-
-.cente {
-    float: right;
-    margin-right: 10%;
-    width: 20%;
-    border-radius: 20px;
-    text-align: center;
-    height: 40%;
-    padding: 10px;
-}
-
-.more {
-    float: left;
-    margin-left: 10%;
-    width: 20%;
-    border-radius: 20px;
-    text-align: center;
-    height: 55%;
-}
-
-.cente a,
-.more a {
-    text-decoration: none;
-    color: black;
-}
-
-.cente a:hover,
-.more a:hover {
-    text-decoration: underline;
-    color: black;
 }
 
 main nav img {
@@ -120,11 +85,7 @@ main nav a {
     padding-left: 5%;
 }
 
-.Website_ku_yang_lama {
-    padding-bottom: 5%;
-
-}
-
+/* preview S*/
 .fakta_unik {
     padding-bottom: 5%;
     background-color: rgb(196, 196, 253);
@@ -166,8 +127,46 @@ h2 {
     padding-left: 200px;
 }
 
+#kirim {
+    background-color: rgb(213, 209, 255);
+}
 
+/* .DivKiri {
+    background-color: rgb(196, 196, 253);
+} */
 
+.DivKanan p,
+.DivKanan h2 {
+    /* float: right; */
+    /* width: 50%;
+    height: 100%; */
+    text-align: left;
+    /* padding-top: 20px; */
+}
+
+.DivKiri p,
+.DivKiri h2 {
+    /* float: left; */
+    /* width: 50%;
+    height: 100%; */
+    text-align: right;
+    /* padding-top: 20px; */
+}
+
+#kirim .DivKiri {
+    left: 5%;
+}
+
+#kirim p,
+#kirim h2,
+#kirim a {
+
+    color: rgb(125, 90, 255)
+}
+
+/* preview E*/
+
+/* artikel S */
 .gambarwebg {
     border-radius: 40px;
     width: 150px;
@@ -191,6 +190,7 @@ h2 {
     padding-top: 10px;
     list-style: none;
     /* float: left; */
+
 }
 
 .gambarweb2 {
@@ -232,8 +232,9 @@ h2 {
     border-radius: 40px;
     text-align: center;
     width: fit-content;
-    height: fit-content;
+    height: min-content;
 }
+
 
 .gambarweb4 {
     display: flex;
@@ -280,6 +281,7 @@ h2 {
     size: 5000px;
 }
 
+/* artikel E */
 .kanan {
     float: right;
     padding-left: 20px;
@@ -341,6 +343,51 @@ img {
     font-size: 500px;
 }
 
+#KidsORteens {
+    background: rgba(255, 113, 113, 0.977);
+    width: auto;
+    height: max-content;
+    text-align: center;
+    z-index: 2;
+    position: sticky;
+    top: 40%;
+    margin: 0 auto;
+}
+
+#KidsORteens img {
+    width: 30%;
+    height: 90%;
+    padding: 0;
+}
+
+.pilihKids {
+    margin-left: 20%;
+    right: 0;
+}
+
+.pilihan a img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.pilihan {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.pilihan a {
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    display: flex;
+}
+
+.pilihan img {
+    width: 30%;
+    height: 100%;
+}
+
 .rest {
     background-color: rgb(4, 0, 89);
     width: 100%;
@@ -375,18 +422,105 @@ img {
     text-align: right;
 }
 
-.container {
-    background-color: rgb(204, 204, 255);
+iframe {
+    max-width: 90%;
+    max-height: 90%;
 }
 
-@media (max-width: 768px) {
+/* iframe:hover {
+    transform: scale(5);
+    cursor: pointer;
 
-    /* Atur ulang layout untuk layar kecil */
-    .container {
-        flex-direction: column;
-        padding: 10px;
-    }
+} */
+#videogame {
+    top: 0;
+    padding-bottom: 20%;
 }
+
+#fullscreen {
+    position: absolute;
+    top: 70%;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#fullscreen button img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20%;
+    width: 10%;
+    border-radius: 50%;
+}
+
+#FullIframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+
+}
+
+.pelapis {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+    pointer-events: none;
+    color: rgba(255, 99, 71, 0.084);
+    /* Agar iframe tidak mengganggu interaksi dengan elemen di bawahnya */
+}
+
+/* main E */
+/* footer S */
+footer {
+    background-color: rgb(207, 159, 255);
+    height: 420px;
+    max-height: 25%;
+    z-index: 4;
+}
+
+.cente {
+    float: right;
+    margin-right: 10%;
+    width: 20%;
+    border-radius: 20px;
+    text-align: center;
+    height: 40%;
+    padding: 10px;
+}
+
+.more {
+    float: left;
+    margin-left: 10%;
+    width: 20%;
+    border-radius: 20px;
+    text-align: center;
+    height: 55%;
+}
+
+.cente a,
+.more a {
+    text-decoration: none;
+    color: black;
+}
+
+.cente a:hover,
+.more a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+/* footer E */
 
 @media (max-width: 568px) {
 
@@ -400,6 +534,12 @@ img {
         height: 15%;
     }
 
+    .slider {
+        float: right;
+        width: 70%;
+        height: 100%;
+    }
+
     .himg {
         width: 15%;
         height: 100%;
@@ -411,5 +551,27 @@ img {
     .hr {
         height: 1px;
         color: rgb(134, 93, 200);
+    }
+
+    .pilihan {
+        display: block;
+        padding-left: 10%;
+    }
+
+    .pilihan a {
+        margin-left: 15%;
+        padding-top: 10%;
+    }
+
+    .sliderArtikel {
+        float: right;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        display: flex;
+        aspect-ratio: 16/9;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
     }
 }
