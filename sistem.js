@@ -1,65 +1,148 @@
-kirim = document.querySelector('#kirim'); script
-  (function () {
-    seteltimer = 100000
-    let restTimer = setTimeout("resting()", seteltimer)
-    kirim.style.display = 'none';
-  })();
+// ============================
+// SETUP AWAL
+// ============================
 
-sydaken = document.querySelector('#syarat');
-sydaken.onclick = function () { kirim.style.display = 'block'; }
+// // default waktu istirahat
+// let restTimer = setTimeout(resting, 10000);
 
-document.getElementById("sembunyi").onclick = function () {
-  document.getElementById("ingat").style.display = 'none';
-  document.body.classList.remove('no-scroll');
-  document.getElementById("rest").style.display = 'none';
+// ambil elemen yang membutuhkan manipulasi
+const kirim = document.querySelector('#kirim');
+const u5 = document.querySelector('#w5');
+const u9 = document.querySelector('#w9');
+const u0 = document.querySelector('#w0');
+
+// sembunyikan elemen di awal
+kirim.style.display = 'none';
+u5.style.display = 'none';
+u9.style.display = 'none';
+u0.style.display = 'none';
+
+// tombol “lihat syarat”
+const sydaken = document.querySelector('#syarat');
+sydaken.onclick = function () {
+  kirim.style.display = 'block';
 };
 
-// Berubah scren time berdasarkan umur
-const logo = [asset / logo_website.svg, asset / teensweb.svg];
-let imgindex = 0;
+// ==================================
+// PILIH UMUR → SET WAKTU ISTIRAHAT
+// ==================================
+const batasWaktu = document.querySelector('#batas');
 const umur = document.querySelector('#KidsORteens');
-document.querySelector('.pilihKids').onclick = function () {
-  seteltimer = 5000
-  restTimer = setTimeout("resting()", seteltimer)
+const detikEl = document.getElementById("detik");
+const menitEl = document.getElementById("menit");
+const jamEl = document.getElementById("jam");
+//let seteltimer = 0;
+let detik = 0;
+let menit = 0;
+let jam = 0;
+const time = null;
+document.querySelector('#pilihKids').onclick = function () {
   umur.style.display = 'none';
-}
-document.querySelector('.pilihTeens').onclick = function () {
-  seteltimer = 9000
-  restTimer = setTimeout("resting()", seteltimer)
-  umur.style.display = 'none';
-}
-document.querySelector('.pilihAdult').onclick = function () {
+  // nanti ubah jadi 2 jam
+  const targetTimeKid = new Date().getTime() + (10 * 1000);
+  const interval = setInterval(() => {
+    const nowKid = new Date().getTime();
+    const distanceKid = targetTimeKid - nowKid;
 
-  restTimer = null
+    // Hitung jam-menit-detik
+    // const hoursKid = Math.floor(distanceKid / (1000 * 60 * 60));
+    // const minutesKid = Math.floor((distanceKid % (1000 * 60 * 60)) / (1000 * 60)); nanti diaktifkan lagi
+    const secondsKid = Math.floor((distanceKid % (1000 * 60)) / 1000);
+
+    // // Tampilkan
+    // jamEl.textContent = hoursKid.toString().padStart(2, "0");
+    // menitEl.textContent = minutesKid.toString().padStart(2, "0");nanti aktifkan lagi
+    detikEl.textContent = secondsKid.toString().padStart(2, "0");
+
+    // Kalau sudah habis
+    if (distanceKid < 0) {
+      clearInterval(interval);
+      document.getElementById("batas").textContent = "Waktu Habis!";
+      resting();
+    }
+  }, 1000);
+};
+
+document.querySelector('#pilihTeens').onclick = function () {
   umur.style.display = 'none';
+  // Countdown 4 jam dari sekarang
+  const targetTimeTeens = new Date().getTime() + (4 * 60 * 60 * 1000);
+  const interval = setInterval(() => {
+    const nowTeen = new Date().getTime();
+    const distanceteen = targetTimeTeens - nowTeen;
+
+    // Hitung jam-menit-detik
+    const hours = Math.floor(distanceteen / (1000 * 60 * 60));
+    const minutes = Math.floor((distanceteen % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distanceteen % (1000 * 60)) / 1000);
+
+    // Tampilkan
+    jamEl.textContent = hours.toString().padStart(2, "0");
+    menitEl.textContent = minutes.toString().padStart(2, "0");
+    detikEl.textContent = seconds.toString().padStart(2, "0");
+
+    // Kalau sudah habis
+    if (distanceteen < 0) {
+      clearInterval(interval);
+      document.getElementById("batas").textContent = "Waktu Habis!";
+      resting();
+    }
+  }, 1000);
 }
+// for (detik = 10; detik > 0; detik--) {
+//   document.getElementById("detik").textContent = detik;
+// }
+// detik = Math.floor(9000 / 1000) % 60;
+// menit = Math.floor(9000 / (1000 * 60)) % 60;
+// jam = Math.floor(9000 / (1000 * 60 * 60));
+// batasWaktu.textContent = 'Batas waktu ' + jam + ' jam ' + menit + ' menit ' + detik + ' detik';
+document.querySelector('#pilihAdult').onclick = function () {
+  umur.style.display = 'none';
+  batasWaktu.style.display = 'none';
+};
+
+
+// if (detik > 59) {
+//   menit++;
+//   detik = detik - 60;
+// }
+// if (menit > 59) {
+//   jam++;
+//   menit = menit - 60;
+// }
+
+// document.getElementById("jam").textContent = parseInt(jam);
+// document.getElementById("menit").textContent = parseInt(menit);
+
+
+
+
+// ============================
+// FUNGSI ISTIRAHAT
+// ============================
 
 function resting() {
   document.body.classList.add('no-scroll');
   document.getElementById('rest').style.display = 'block';
-  setTimeout("notrest()", 6000)
+
+  // kembali normal setelah 6 detik
+  setTimeout(notrest, 6000);
 }
+
 function notrest() {
   document.getElementById('rest').style.display = 'none';
   document.body.classList.remove('no-scroll');
-  document.getElementById('ingat').style.display = 'block';
+  // nonaktifkan ini saat sudah presentasi : setTimeout(resting, seteltimer);
+  setTimeout(resting, 7200000);
+  batasWaktu.style.display = 'none';
+  // elemen #ingat sudah tidak ada di HTML
+  // jadi jangan dipanggil lagi untuk mencegah error
 }
 
-jam = menit / 60
-menit = detik / 60
-detik = seteltimer / 1000
 
-const jamEl = document.querySelector("#jam");
-const menitEL = document.getElementById('menit');
-const detikEl = document.getElementById('detik');
-jamEl.textContent = "5";
-menitEL.textContent = menit;
-detikEl.textContent = detik + "detik";
-//let hours = Math.floor(diff  / hour_to_miliseconds);
-
-//let minutes = Math.floor((diff % hour_to_miliseconds) / minute_to_miliseconds);
-
-//let seconds = Math.floor((diff % minute_to_miliseconds) / second_to_miliseconds);
+// ============================
+// FULLSCREEN IMAGE (AMAN)
+// ============================
 
 function fullscreen(imglink) {
   document.getElementById("FullIframe").src = imglink;
@@ -67,18 +150,10 @@ function fullscreen(imglink) {
 }
 
 function toggleFullscreen() {
-  var iframe = document.querySelector('.iframe');
+  const iframe = document.querySelector('.iframe');
 
-  // Periksa apakah browser mendukung mode layar penuh
-  if (iframe.requestFullscreen) {
-    iframe.requestFullscreen();
-  } else if (iframe.mozRequestFullScreen) { /* Firefox */
-    iframe.mozRequestFullScreen();
-  } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-    iframe.webkitRequestFullscreen();
-  } else if (iframe.msRequestFullscreen) { /* IE/Edge */
-    iframe.msRequestFullscreen();
-  }
+  if (iframe.requestFullscreen) iframe.requestFullscreen();
+  else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+  else if (iframe.mozRequestFullScreen) iframe.mozRequestFullScreen();
+  else if (iframe.msRequestFullscreen) iframe.msRequestFullscreen();
 }
-
-

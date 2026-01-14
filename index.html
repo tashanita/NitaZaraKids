@@ -11,16 +11,7 @@
 </head>
 
 <body>
-    <img src="asset/background.svg" class="background">
-    <div id="rest" class="rest">
-        <h2>Istirahat dulu yuk!</h2>
-        <img src="asset/night.png">
-        <p>
-            Istirahat dulu yuk, <br>
-            supaya mata kita tidak lelah, <br>
-            dan supaya kita bisa fokus lagi nanti.
-        </p>
-    </div>
+
     <header>
         <div class="headerKeren">
             <img src="asset/logo_website.svg" class="himg">
@@ -38,16 +29,16 @@
     <div id="KidsORteens">
         <h2>Kamu usia yang mana?</h2>
         <div class="pilihan">
-            <a class="pilihKids" onclick="document.getElementById('KidsORteens').style.display='none'">
+            <a id="pilihKids">
                 Anak Kecil <br> (0-9 tahun) <br>
                 <img src="asset/anak.png" id="tombolAnak">
             </a>
-            <a class="pilihTeens" onclick="document.getElementById('KidsORteens').style.display='none'">
+            <a id="pilihTeens">
                 Remaja <br> (10-18 tahun) <br>
                 <img src="asset/teens.png" id="tombolTeens">
 
             </a>
-            <a class="pilihAdult">
+            <a id="pilihAdult">
                 dewasa <br> (19+)
                 <img src="asset/dewasa.png">
             </a>
@@ -68,22 +59,21 @@
     </div> -->
 
     <main>
-        <p> batas waktu <span id="jam">0</span> jam <span id="menit">0</span> menit <span id="detik">0</span> detik </p>
-        <!-- <div class="timer">
-            <div class="time">
-                <span id="jam">9</span>
-                <p>Jam</p>
-            </div>
-            <div class="time">
-                <span id="menit">30</span>
-                <p>Menit</p>
-            </div>
-            <div class="time">
-                <span id="detik">00</span>
-                <p>Detik</p>
-            </div>
-            <p>sampai waktu istirahat</p>
-        </div> -->
+        <p id="batas"> batas waktu <span id="jam">0</span> jam <span id="menit">0</span> menit <span id="detik">0</span>
+            detik </p>
+        <img src="asset/background.svg" class="background">
+        <div id="rest" class="rest">
+            <h2>Istirahat dulu yuk!</h2>
+            <img src="asset/night.png">
+            <p>
+                Istirahat dulu yuk, <br>
+                supaya mata kita tidak lelah, <br>
+                dan supaya kita bisa fokus lagi nanti.
+            </p>
+        </div>
+        <p id="w5">Batas Waktu 5</p>
+        <p id="w9">Batas Waktu 9</p>
+        <p id="w0">Batas Waktu 0</p>
         <H1> Selamat datang di Kids Web </H1>
         <br>
         <aside class="kanan">
@@ -183,7 +173,7 @@
             <a href="#">Lihat</a>
         </Div>
 
-        <script src="sistem.js"></script>
+
     </main>
     <footer>
         <div class="more">
@@ -196,4 +186,5 @@
             <a href="https://github.com/tashanita"> github</a>
         </div>
     </footer>
+    <script defer src="sistem.js"></script>
 </body>

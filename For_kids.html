@@ -71,9 +71,9 @@
         <h2>Dongeng dan cerita anak</h2>
         <div class="gambarweb2">
             <div class="gambarweb">
-                <img src="#" class="gambarwebg">
+                <img src="anak/dongeng/asset/sikancil.jpeg" class="gambarwebg">
                 <h3>Si kancil </h3>
-                <a href="#">baca</a>
+                <a href="anak/dongeng/sikancil.html">baca</a>
             </div>
             <div class="gambarweb6">
                 <p>_</p>
@@ -127,11 +127,13 @@
         <section id="videoGame" class="gambarweb2">
             <h2>Game dan video</h2>
             <div class="gambarweb">
-                <a href="https://scratch.mit.edu/projects/1163343154/fullscreen" target="_blank">
-
-                    <iframe src="https://scratch.mit.edu/projects/1163343154/fullscreen" onclick="toggleFullscreen()"
+                <div>
+                    <iframe src="https://scratch.mit.edu/projects/1163343154/fullscreen" id="vid1" class="iframe"
                         allowfullscreen></iframe>
-
+                    <img src="asset/maximize.png" alt="fullscreen" class="fullbtn"
+                        onclick="fullscreen(document.querySelector('#vid1').src)">
+                </div>
+                <a href="https://scratch.mit.edu/projects/1163343154/fullscreen" target="_blank">
                     <h3>Animasi : Jangan Membuli !</h3>
                 </a>
                 <p>Di sebuah lomba ada anak yang dibuli bernama oyen, <br> tapi kenapa di dibuli? bagaimana
@@ -141,9 +143,12 @@
                 <p>_</p>
             </div>
             <div class="gambarweb">
-
-                <iframe src="https://wordwall.net/id/resource/100623474/permainan-untuk-anak-paud"
-                    onmouseover="fullscreen(this.src)" href="#fullscreen" class="iframe" allowfullscreen></iframe>
+                <div>
+                    <iframe src="https://wordwall.net/id/resource/100623474/permainan-untuk-anak-paud" id="gam1"
+                        class="iframe" allowfullscreen></iframe>
+                    <img src="asset/maximize.png" alt="fullscreen" class="fullbtn"
+                        onclick="fullscreen(document.querySelector('#gam1').src)">
+                </div>
                 <a href="https://wordwall.net/id/resource/100623474/permainan-untuk-anak-paud" target="_blank">
                     <h3>Game Edukasi : AdaptedMind</h3>
                 </a>
@@ -164,13 +169,12 @@
     <footer>
         <div class="more">
             <h3>Contact Me</h3>
-            <p> Gmail : codingwithtasha@gmail.com</p>
-            <p> Gmail : tashanitazara190@gmail.com</p>
+            <p><a href="mailto:tashanitazara@gmail.com" target="_blank">Gmail</a></p>
+            <p><a href="https://discord.gg/gxYnhYSJ" target="_blank">Discord</a></p>
         </div>
         <div class="cente">
             <h3>Folow Me</h3>
-            <p> Youtube : coding with tasha</p>
-            <p>github : https://github.com/tashanita</p>
+            <a href="https://github.com/tashanita"> github</a>
         </div>
     </footer>
 </body>
